@@ -5,7 +5,7 @@ export default function ItemList(props) {
     return <ul className="ui-list">
     {props.items.map((i) => {
       return (
-        <li className="ui-item-list">
+        <li className="ui-item-list" key={i.id}>
           <Item info={i} />
           <button
             onClick={props.onDelClick}
