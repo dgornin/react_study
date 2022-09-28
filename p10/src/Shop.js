@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ItemsList from "./ItemsList";
 import AddItem from "./AddItem";
+import uuid from "react-uuid";
 
 export default function Shop() {
   const [items, setItems] = useState([]);
@@ -21,7 +22,7 @@ export default function Shop() {
     }
 
     const input = {
-        id: items.length + 1,
+        id: uuid(),
         name: name,
         desc: desc
     }
