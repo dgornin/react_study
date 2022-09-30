@@ -20,5 +20,8 @@ export default function useMapbox(container, center, zoom) {
           center: center,
           zoom: zoom
         });
-    }, []);
+        return() => {
+            map.remove();
+        }
+    });
 }
